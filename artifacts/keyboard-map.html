@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101310">
+  <title>rukiOS — Shared keyboard map</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101310;--panel:#181d18;--line:#303a30;--text:#eef2e9;--muted:#a2ada0;--green:#b8f36a;--amber:#f4c879;--red:#f18a7b;--blue:#8dc8e7;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 var(--sans)}main{width:min(950px,calc(100% - 32px));margin:auto;padding:24px 0 45px}.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.brand{display:flex;gap:10px;align-items:center}.mark{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--green);color:#16200f;font:900 19px var(--mono)}.brand small{display:block;color:var(--muted);font-size:10px}.back{color:var(--green);font-size:11px;text-decoration:none}.hero{padding:34px 0 20px}.eyebrow{color:var(--green);font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}h1{margin:8px 0;font-size:clamp(32px,6vw,48px);letter-spacing:-.06em;line-height:1.05}h1 span{color:var(--green)}.lead{max-width:700px;color:#b6c0b4;font-size:13px}.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card{padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.card h2{margin:0 0 9px;font-size:12px}.row{display:grid;grid-template-columns:115px 1fr;gap:10px;padding:5px 0;border-top:1px solid #252c25}.key{font:11px var(--mono);color:var(--green)}.desc{color:#c5cec3;font-size:10px}.audit{margin-top:22px}.audit h2{margin:0 0 9px;font-size:16px}.table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);font-size:10px}.table th,.table td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid #293129}.table th{color:var(--green);background:#1d241d;font-weight:650}.table tr:last-child td{border-bottom:0}.ok{color:var(--green)}.partial{color:var(--amber)}.gap{color:var(--red)}.note{margin-top:11px;padding:11px 13px;border:1px solid #55472d;border-radius:9px;background:#211e16;color:#d5c39e;font-size:10px}.note b{color:var(--amber)}.omarchy{margin-top:22px;padding:15px 17px;border:1px solid #3b4938;border-radius:10px;background:linear-gradient(140deg,#1b2319,#151a15)}.omarchy h2{margin:0 0 8px;font-size:15px}.omarchy p,.omarchy li{color:#bdc7b9;font-size:10px}.omarchy ul{display:grid;gap:6px;margin:8px 0;padding-left:18px}.omarchy a{color:var(--green)}.source-note{color:#839082!important;font-size:9px!important}.proposed{margin-top:18px}.proposed h2{margin:0 0 7px;font-size:15px}.proposed>p{margin:0 0 9px;color:#bdc7b9;font-size:10px}.proposed .table{font-size:10px}.required{color:var(--amber);font-size:9px}footer{display:flex;justify-content:space-between;gap:12px;margin-top:26px;padding-top:11px;border-top:1px solid var(--line);color:#7d887b;font-size:9px}@media(max-width:620px){.map{grid-template-columns:1fr}.table th:nth-child(3),.table td:nth-child(3){display:none}.row{grid-template-columns:100px 1fr}footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+<main>
+  <header class="top"><div class="brand"><div class="mark">r</div><div><b>rukiOS</b><small>Shared keyboard map</small></div></div><a class="back" href="index.html">← Distribution plan</a></header>
+  <section class="hero"><div class="eyebrow">One map · all system TUIs</div><h1>Keep your hands<br><span>on the keyboard.</span></h1><p class="lead">This is the shared target map for the ruki System Console and ruki-monitor. Arrow keys remain available. Context-specific actions are shown in each screen; risky actions always require a visible confirmation.</p></section>
+  <section class="map" aria-label="Shared key bindings">
+    <article class="card"><h2>Move and select</h2><div class="row"><span class="key">j / ↓</span><span class="desc">Move down through rows or the vertical section list.</span></div><div class="row"><span class="key">k / ↑</span><span class="desc">Move up through rows or the vertical section list.</span></div><div class="row"><span class="key">h / ←</span><span class="desc">Move focus to the previous side-by-side panel when one exists.</span></div><div class="row"><span class="key">l / →</span><span class="desc">Move focus to the next side-by-side panel when one exists.</span></div><div class="row"><span class="key">Tab / Shift-Tab</span><span class="desc">Move to the next / previous panel or section.</span></div><div class="row"><span class="key">Enter</span><span class="desc">Open or activate the selected item when that view supports it.</span></div></article>
+    <article class="card"><h2>Find and navigate</h2><div class="row"><span class="key">/</span><span class="desc">Start searching or filtering the current list.</span></div><div class="row"><span class="key">Enter</span><span class="desc">Apply the search; while confirming an action, accept it.</span></div><div class="row"><span class="key">Esc</span><span class="desc">Cancel search/modal first; otherwise leave the current TUI.</span></div><div class="row"><span class="key">PgUp / PgDn</span><span class="desc">Move by one page in a long list or view.</span></div><div class="row"><span class="key">Home / End · g / G</span><span class="desc">Jump to the first / last item where list navigation applies.</span></div><div class="row"><span class="key">1–9 / 0</span><span class="desc">Jump to numbered sections where shown.</span></div></article>
+    <article class="card"><h2>Common actions</h2><div class="row"><span class="key">r</span><span class="desc">Refresh the current view or its live data.</span></div><div class="row"><span class="key">?</span><span class="desc">Show the contextual keyboard help overlay. <b class="gap">Target; not implemented yet.</b></span></div><div class="row"><span class="key">q / Esc</span><span class="desc">Quit the TUI; Esc cancels an active input or confirmation first.</span></div><div class="row"><span class="key">y / Enter</span><span class="desc">Confirm the clearly described pending action.</span></div><div class="row"><span class="key">n / Esc</span><span class="desc">Cancel the pending action.</span></div></article>
+    <article class="card"><h2>Context actions · label these in the view</h2><div class="row"><span class="key">x</span><span class="desc">Request graceful stop for the selected process or service.</span></div><div class="row"><span class="key">s</span><span class="desc">Monitor: cycle process sort. Services: start selected service.</span></div><div class="row"><span class="key">t</span><span class="desc">Toggle process tree in ruki-monitor.</span></div><div class="row"><span class="key">R</span><span class="desc">Restart selected service in the System Console.</span></div><div class="row"><span class="key">Pointer input</span><span class="desc">No navigation or core task may depend on mouse actions.</span></div></article>
+  </section>
+  <section class="omarchy" aria-labelledby="omarchy-title">
+    <h2 id="omarchy-title">What we can learn from Omarchy</h2>
+    <p>Omarchy is a desktop distribution using Hyprland, so its global Super-key shortcuts are a different layer from rukiOS TUI keys. The useful design ideas are discoverability and clear separation of shortcut scopes:</p>
+    <ul>
+      <li><b>Make the map easy to summon:</b> Omarchy exposes its desktop bindings with <code>Super + K</code>; its manual also lists separate key lists for Tmux and Herdr. rukiOS should provide a visible in-app <code>?</code> help view in each TUI and keep any future global shortcuts in a separate map.</li>
+      <li><b>Separate global and local controls:</b> Omarchy uses Super-modified chords for desktop actions (for example, <code>Super + Space</code> opens its menu and <code>Super + 1–4</code> selects workspaces). Tmux then has its own prefix and a vi-style copy mode. For rukiOS, keep system TUI actions local and consistent; do not copy desktop Super bindings into list navigation.</li>
+      <li><b>Keep user overrides maintainable:</b> Omarchy documents a user-owned <code>~/.config/hypr/bindings.lua</code>, an in-menu setup path, and loading user bindings after defaults. This is a useful future model for rukiOS customization: documented user overrides rather than editing package-managed defaults directly.</li>
+    </ul>
+    <p class="source-note">On Omarchy, <code>Super + K</code> lists desktop bindings, <code>Super + Alt + K</code> lists Tmux keys, and <code>Super + Ctrl + K</code> lists Herdr keys. Your local overrides may differ. Sources: <a href="https://omarchy.org/manual/hotkeys/">Omarchy Hotkeys manual</a> (keybinding viewer and desktop/Tmux maps); <a href="https://github.com/omacom/omarchy/blob/quattro/manual/31-dotfiles.md">Omarchy Dotfiles manual</a> (user keybinding overrides); <a href="https://github.com/omacom/omarchy/blob/quattro/default/agents/skills/omarchy/hyprland.md">Omarchy Hyprland configuration guide</a> (binding file and validation guidance). Referenced 13 Oct 2026.</p>
+  </section>
+  <section class="proposed" aria-labelledby="global-map-title">
+    <h2 id="global-map-title">Proposed rukiOS shortcut profile</h2>
+    <p>Use Omarchy's layered approach: global modifier chords for OS navigation and launch, Vim keys inside TUIs, and a dedicated reference for each layer. Everything below is a proposal, not implemented behavior. Global bindings are optional on compositor installs; the text-only system remains fully operable from keyboard, TTY, CLI, and TUI.</p>
+    <table class="table"><thead><tr><th>Shortcut</th><th>Proposed rukiOS action</th><th>Layer</th></tr></thead><tbody>
+      <tr><td><code>Super + Space</code></td><td>Open the ruki command center: searchable TUI entries for system tools and commands.</td><td>Global</td></tr>
+      <tr><td><code>Super + Alt + Space</code></td><td>Open a focused launcher for installed terminal applications and TUIs.</td><td>Global</td></tr>
+      <tr><td><code>Super + K</code></td><td>Show the searchable global shortcut reference; <code>?</code> shows the current TUI's local bindings.</td><td>Global/help</td></tr>
+      <tr><td><code>Super + Return</code></td><td>Open the default terminal; <code>Super + Alt + Return</code> opens a terminal multiplexer.</td><td>Global</td></tr>
+      <tr><td><code>Super + Ctrl + Return</code></td><td>Open the integrated agent manager/interface in a terminal.</td><td>Global app shortcut</td></tr>
+      <tr><td><code>Super + Esc</code></td><td>Open a keyboard-driven session/power menu. Suspend, reboot, and poweroff require explicit confirmation.</td><td>Global</td></tr>
+      <tr><td><code>Super + Ctrl + L</code></td><td>Lock the session.</td><td>Global security action</td></tr>
+      <tr><td><code>Super + Ctrl + T</code></td><td>Open the ruki live system monitor.</td><td>Global tool shortcut</td></tr>
+      <tr><td><code>Super + Ctrl + W</code></td><td>Open ruki network status/settings when that TUI exists.</td><td>Global tool shortcut</td></tr>
+      <tr><td><code>Super + Ctrl + P</code></td><td>Open the session/power controls.</td><td>Global tool shortcut</td></tr>
+      <tr><td><code>Super + Shift + F</code></td><td>Open the terminal file browser; never require a graphical file manager.</td><td>Global app shortcut</td></tr>
+      <tr><td><code>Super + Shift + N</code></td><td>Open the configured text editor.</td><td>Global app shortcut</td></tr>
+    </tbody></table>
+
+    <details open><summary>Workspace and window navigation · optional compositor layer</summary>
+      <table class="table"><thead><tr><th>Shortcut</th><th>Proposed behavior</th><th>Omarchy relation</th></tr></thead><tbody>
+        <tr><td><code>Super + 1–4</code></td><td>Switch to workspace 1–4. Allow more workspaces through configuration.</td><td>Matches the documented default.</td></tr>
+        <tr><td><code>Super + Shift + 1–4</code><br><code>Super + Shift + Alt + 1–4</code></td><td>Move focused window to workspace; the Alt variant moves without following it.</td><td>Matches the documented default.</td></tr>
+        <tr><td><code>Super + Tab</code><br><code>Super + Shift + Tab</code></td><td>Next / previous workspace.</td><td>Matches the documented default.</td></tr>
+        <tr><td><code>Super + Ctrl + Tab</code></td><td>Return to the previously used workspace.</td><td>Matches the documented default.</td></tr>
+        <tr><td><code>Super + Shift + 1–4</code></td><td>Move the focused terminal/window to that workspace.</td><td>Matches the documented default; optional window layer.</td></tr>
+        <tr><td><code>Super + Arrow</code></td><td>Move focus between tiled windows or terminal panes in that direction.</td><td>Keyboard equivalent to directional focus.</td></tr>
+        <tr><td><code>Super + Shift + Arrow</code></td><td>Swap the focused window with another window in that direction.</td><td>Keyboard-only window arrangement.</td></tr>
+        <tr><td><code>Alt + Tab</code><br><code>Alt + Shift + Tab</code></td><td>Cycle forward / backward through windows on the current workspace.</td><td>Matches the documented default.</td></tr>
+        <tr><td><code>Ctrl + Alt + Tab</code><br><code>Ctrl + Alt + Shift + Tab</code></td><td>Cycle focus forward / backward across monitors.</td><td>Matches the documented default.</td></tr>
+        <tr><td><code>Super + W / Q</code></td><td>Close the focused window.</td><td>Window-manager action; avoid binding inside TUI screens.</td></tr>
+        <tr><td><code>Ctrl + Alt + Delete</code></td><td>Close all windows.</td><td>Do not adopt as a default: the broad destructive effect is easy to trigger.</td></tr>
+        <tr><td><code>Super + F</code></td><td>Toggle focused window fullscreen.</td><td>Matches Omarchy's fullscreen shortcut.</td></tr>
+        <tr><td><code>Super + Alt + F</code><br><code>Super + Ctrl + F</code></td><td>Toggle full-width / fullscreen inside the current window.</td><td>Optional compositor layout behavior.</td></tr>
+        <tr><td><code>Super + T</code></td><td>Toggle focused window between tiled and floating, when floating windows are supported.</td><td>Optional compositor behavior.</td></tr>
+        <tr><td><code>Super + J</code></td><td>Toggle tiled layout orientation.</td><td>Optional compositor behavior.</td></tr>
+        <tr><td><code>Super + O / L / P</code></td><td>Toggle sticky/floating; switch tiling layout; toggle pseudo window style.</td><td>Optional advanced compositor behavior.</td></tr>
+        <tr><td><code>Super + S</code></td><td>Toggle the scratchpad for a hidden terminal/tool.</td><td>Optional compositor behavior.</td></tr>
+        <tr><td><code>Super + Grave</code></td><td>Toggle scratchpad; <code>Super + Alt + S</code> or <code>Super + Shift + Grave</code> moves the focused window into it.</td><td>Optional compositor behavior.</td></tr>
+        <tr><td><code>Super + Shift + Alt + Arrow</code></td><td>Move workspaces between monitors in the given direction.</td><td>Keyboard-only multi-monitor behavior.</td></tr>
+        <tr><td><code>Super + Minus / Equal</code><br><code>Super + Shift + Minus / Equal</code></td><td>Resize tiled layout horizontally / vertically. Add <code>Alt</code> for smaller steps and <code>Ctrl</code> for larger steps.</td><td>Keyboard resize equivalents; no mouse drag.</td></tr>
+        <tr><td><code>Super + G</code><br><code>Super + Alt + G</code></td><td>Group focused window / move it out of a group.</td><td>Optional advanced tiling behavior.</td></tr>
+        <tr><td><code>Super + Alt + Tab</code><br><code>Super + Alt + Shift + Tab</code></td><td>Cycle forward / backward inside a window group.</td><td>Optional advanced tiling behavior.</td></tr>
+        <tr><td><code>Super + Ctrl + ← / →</code></td><td>Move between windows inside a tiled group.</td><td>Optional advanced tiling behavior.</td></tr>
+        <tr><td><code>Super + Alt + 1–5</code></td><td>Jump to a window in the active group; <code>Super + Alt + Tab</code> and Shift-Tab cycle that group.</td><td>Optional grouped-window navigation.</td></tr>
+        <tr><td><code>Super + Alt + Arrow</code></td><td>Move the focused window into a group in that direction.</td><td>Optional grouped-window navigation.</td></tr>
+        <tr><td><code>Super + Alt + Home</code><br><code>Super + Home</code></td><td>Save / restore focused window width.</td><td>Optional compositor convenience.</td></tr>
+        <tr><td><code>Super + Ctrl + Z</code><br><code>Super + Ctrl + Alt + Z</code></td><td>Zoom in / reset zoom.</td><td>Keyboard accessibility feature.</td></tr>
+        <tr><td><code>Super + /</code><br><code>Super + Alt + /</code></td><td>Step monitor scaling forward / backward.</td><td>Optional display control; expose an accessible TUI too.</td></tr>
+      </tbody></table>
+    </details>
+
+    <details open><summary>ruki TUI navigation and actions · core on every install</summary>
+      <table class="table"><thead><tr><th>Shortcut</th><th>Standard behavior</th><th>State</th></tr></thead><tbody>
+        <tr><td><code>h / j / k / l</code></td><td>Left / down / up / right. Use arrows as equivalent keys.</td><td>Target; fix console h/l mismatch.</td></tr>
+        <tr><td><code>Tab / Shift + Tab</code></td><td>Next / previous section or focusable panel.</td><td>Already partly present.</td></tr>
+        <tr><td><code>Enter</code> / <code>Space</code></td><td>Open/activate selection / toggle a focused choice where supported.</td><td>Target; ensure each view labels behavior.</td></tr>
+        <tr><td><code>/</code>, <code>n</code>, <code>N</code></td><td>Search; next / previous match.</td><td>Search exists; match navigation target.</td></tr>
+        <tr><td><code>g / G</code>, <code>Home / End</code></td><td>First / last row or section.</td><td>Already present in list and section navigation.</td></tr>
+        <tr><td><code>Page Up / Page Down</code></td><td>Scroll one page.</td><td>Already present.</td></tr>
+        <tr><td><code>r</code></td><td>Refresh current data/view.</td><td>Already present.</td></tr>
+        <tr><td><code>?</code></td><td>Show local help and the current screen's key bindings.</td><td>Gap in both current TUIs.</td></tr>
+        <tr><td><code>Esc</code></td><td>Cancel modal/input or go back one level; quit only at the top level.</td><td>Consistent target.</td></tr>
+        <tr><td><code>q</code></td><td>Quit current TUI/view.</td><td>Already present.</td></tr>
+        <tr><td><code>x</code></td><td>Request process/service stop; always show target and require confirmation.</td><td>Present in monitor/services.</td></tr>
+        <tr><td><code>s / R</code></td><td>Service: start / restart selected service; confirm state changes.</td><td>Present in System Console.</td></tr>
+        <tr><td><code>o / t</code></td><td>Process view: cycle sort order / toggle process tree.</td><td>Proposed consistent names; monitor currently uses <code>s</code> for sort.</td></tr>
+      </tbody></table>
+    </details>
+
+    <details><summary>System controls and app launch chords · adapt when the matching ruki tool exists</summary>
+      <table class="table"><thead><tr><th>Omarchy chord family</th><th>Omarchy role</th><th>rukiOS direction</th></tr></thead><tbody>
+        <tr><td><code>Super + Ctrl + A / B / W / D / P</code></td><td>Audio / Bluetooth / Wi-Fi / display / power panel.</td><td>Use for matching keyboard-driven system TUIs. Keep each command available in CLI as well.</td></tr>
+        <tr><td><code>Super + Ctrl + T / H / Q / E</code></td><td>Activity monitor / hardware / calculator / emoji tools.</td><td>Adopt <code>T</code> for the ruki monitor; add other chords only when those tools ship.</td></tr>
+        <tr><td><code>Super + Ctrl + 1–9</code></td><td>Toggle bar panels by position.</td><td>Not part of the core TUI map; do not bind without a bar/panel feature.</td></tr>
+        <tr><td><code>Super + Ctrl + Shift + A</code></td><td>Choose an AI agent.</td><td>Could open ruki agent selection once multiple agents exist; no agent switching needed for the first read-only agent.</td></tr>
+        <tr><td><code>Super + Ctrl + Alt + D / E</code></td><td>Open calendar / world clock panels.</td><td>Optional tools; retain only if rukiOS ships them.</td></tr>
+        <tr><td><code>Super + Ctrl + S / C / O / .</code></td><td>Share menu / capture controls / menu toggle / media transcoding.</td><td>Feature shortcuts should have equivalent keyboard-driven TUI entry points.</td></tr>
+        <tr><td><code>Super + Ctrl + I / N</code></td><td>Toggle idle lock / night-light temperature.</td><td>Future system controls; expose status and CLI/TUI access.</td></tr>
+        <tr><td><code>Super + Ctrl + Delete</code><br><code>Super + Ctrl + Alt + Delete</code></td><td>Toggle laptop display / mirror laptop display.</td><td>Optional hardware controls with visible status.</td></tr>
+        <tr><td><code>Super + Ctrl + R</code><br><code>Super + Ctrl + Alt + R</code><br><code>Super + Ctrl + Shift + R</code></td><td>Create / list / clear reminders.</td><td>Reserve only if reminders ship; clearing requires confirmation.</td></tr>
+        <tr><td><code>Super + Ctrl + Alt + T / B / W</code></td><td>Show time / battery / weather.</td><td>Read-only status shortcuts when data sources are supported.</td></tr>
+        <tr><td><code>Super + Shift + Space</code><br><code>Super + Shift + Backspace</code></td><td>Toggle top bar / window gaps.</td><td>Compositor presentation settings, outside core ruki TUI.</td></tr>
+        <tr><td><code>Super + Ctrl + Shift + Space</code><br><code>Super + Ctrl + Space</code></td><td>Choose theme / background.</td><td>Optional compositor theming, outside core ruki TUI.</td></tr>
+        <tr><td><code>Super + Shift + Return</code></td><td>Launch browser.</td><td>Not a core rukiOS workflow; graphical browser is optional/out of scope for the system control layer.</td></tr>
+        <tr><td><code>Super + Shift + F</code><br><code>Super + Shift + N</code></td><td>Launch file manager / Neovim editor.</td><td>Map to a terminal file browser / configured editor so the same workflow stays keyboard-first.</td></tr>
+        <tr><td><code>Super + Shift + Alt + F</code></td><td>Open file manager at the terminal's current directory.</td><td>A future terminal file TUI should inherit the current path.</td></tr>
+        <tr><td><code>Super + Shift + Alt + B</code></td><td>Launch private browser window.</td><td>Optional GUI app shortcut, not a core system interface.</td></tr>
+        <tr><td><code>Super + Shift + /</code></td><td>Launch password manager.</td><td>Optional app shortcut; not a core rukiOS function.</td></tr>
+        <tr><td><code>Super + Shift + C / E</code><br><code>Super + Shift + Alt + E</code></td><td>Calendar / email / compose email.</td><td>Omarchy web-app bindings; not core rukiOS tools.</td></tr>
+        <tr><td><code>Super + Shift + A</code><br><code>Super + Shift + Alt + A</code></td><td>Open ChatGPT / Grok.</td><td>Omarchy host owns these chords; do not replace them when ruki runs inside Omarchy.</td></tr>
+        <tr><td><code>Super + Shift + G / P / S / Y</code></td><td>Signal / Photos / Maps / YouTube.</td><td>Omarchy-specific app bindings; not rukiOS core.</td></tr>
+        <tr><td><code>Super + Shift + Alt + G</code><br><code>Super + Shift + Ctrl + G</code></td><td>WhatsApp / Google Messages.</td><td>Omarchy-specific web-app bindings; not rukiOS core.</td></tr>
+        <tr><td><code>Super + Shift + X</code><br><code>Super + Shift + Alt + X</code></td><td>Open X / start a post.</td><td>Omarchy-specific web-app bindings; not rukiOS core.</td></tr>
+        <tr><td><code>Super + Shift + M</code><br><code>Super + Shift + Alt + M</code><br><code>Super + Shift + D / O / W / X</code></td><td>Music app / CLI music / Docker / notes / writing / social app.</td><td>Reserve app chords for tools rukiOS actually ships.</td></tr>
+        <tr><td><code>Super + C / X / V</code></td><td>Copy / cut / paste outside terminal contexts; <code>Super + Ctrl + V</code> opens clipboard history.</td><td>Preserve terminal-native copy/paste behavior; document context differences and provide keyboard-only clipboard access if included.</td></tr>
+        <tr><td><code>Print Screen</code>, <code>Alt + Print Screen</code>, <code>Super + Print Screen</code></td><td>Screenshot / screen recording / color picker.</td><td>Optional utility shortcuts; not part of system navigation.</td></tr>
+        <tr><td><code>Super + Ctrl + Print Screen</code><br><code>Super + Alt + [ / ]</code></td><td>Extract screen text to clipboard / resize webcam overlay.</td><td>Optional capture utilities; omit webcam controls if no recording feature.</td></tr>
+        <tr><td><code>Alt + Shift + L / D</code></td><td>Copy current URL / download current video.</td><td>Browser-specific; outside core system navigation.</td></tr>
+        <tr><td><code>Super + Ctrl + X</code><br><code>F9</code></td><td>Toggle dictation / push-to-talk.</td><td>Optional; only bind when voice input is installed and permission is clear.</td></tr>
+        <tr><td><code>Super + ,</code>, <code>Super + Shift + ,</code></td><td>Dismiss latest / all notifications.</td><td>Only applicable with a notification service.</td></tr>
+        <tr><td><code>Super + Ctrl + ,</code>, <code>Super + Alt + ,</code>, <code>Super + Shift + Alt + ,</code></td><td>Toggle silence / invoke latest / open notification history.</td><td>Only applicable with a notification service.</td></tr>
+        <tr><td><code>Shift + Brightness</code>; <code>Alt + Volume/Brightness</code></td><td>Set brightness extremes; make fine one-percent adjustments.</td><td>Reuse where hardware and permissions support it; expose current values and errors.</td></tr>
+        <tr><td><code>Keyboard Brightness Up/Down</code><br><code>Keyboard Backlight</code></td><td>Adjust / cycle keyboard backlight.</td><td>Hardware-specific keyboard controls where available.</td></tr>
+        <tr><td><code>Shift + Mute</code><br><code>Shift + Play</code></td><td>Switch audio output / media source.</td><td>Optional hardware/media controls.</td></tr>
+        <tr><td><code>Alt + Play</code>, <code>Alt + Shift + Play</code></td><td>Next / previous media track.</td><td>Optional media control, outside first-release scope.</td></tr>
+        <tr><td><code>Super + Backspace</code><br><code>Super + Ctrl + Backspace</code></td><td>Toggle window transparency / square aspect. <code>Super + Ctrl + Alt + F</code> toggles full-desktop mode.</td><td>Optional compositor look-and-feel controls.</td></tr>
+        <tr><td><code>CapsLock + M + S/C/L/V/H/Y/N/F/W/R/K/E/I/P/M/X/T/O/G/A/B</code> or <code>1</code></td><td>Type Omarchy's configured emoji shortcuts.</td><td>Optional text input feature, not system navigation.</td></tr>
+        <tr><td><code>CapsLock + Space + Space / N / E</code></td><td>Insert dash / configured name / configured email.</td><td>Personal text-completion shortcuts; user-configurable only.</td></tr>
+      </tbody></table>
+    </details>
+
+    <details><summary>Terminal, Tmux, file browser, and editor reference</summary>
+      <table class="table"><thead><tr><th>Context</th><th>Shortcut</th><th>Behavior</th></tr></thead><tbody>
+        <tr><td>Tmux</td><td><code>Ctrl + Space</code> prefix (<code>Ctrl + B</code> fallback)</td><td>Start Tmux commands.</td></tr>
+        <tr><td>Tmux panes</td><td><code>Prefix + v / h / x / z</code></td><td>Split beside / below; close pane; zoom pane.</td></tr>
+        <tr><td>Tmux movement</td><td><code>Ctrl + Alt + Arrows</code></td><td>Move between panes; add Shift to resize.</td></tr>
+        <tr><td>Tmux windows</td><td><code>Alt + 1–9</code>, <code>Alt + Left/Right</code></td><td>Jump / move between terminal windows.</td></tr>
+        <tr><td>Tmux windows</td><td><code>Prefix + c / k / r</code></td><td>Create / close / rename a terminal window.</td></tr>
+        <tr><td>Tmux sessions</td><td><code>Prefix + s / d / N / P</code></td><td>List / detach / next / previous session.</td></tr>
+        <tr><td>Tmux sessions</td><td><code>Prefix + C / K / R</code></td><td>Create / close / rename a session.</td></tr>
+        <tr><td>Tmux vi copy</td><td><code>Prefix + [</code>, then <code>v</code>, <code>y</code></td><td>Enter copy mode, select, and yank.</td></tr>
+        <tr><td>Tmux help</td><td><code>Prefix + ?</code></td><td>Show Tmux keybindings.</td></tr>
+        <tr><td>Terminal splits</td><td><code>Ctrl + Shift + E / O</code>; <code>Ctrl + Alt + Arrows</code></td><td>Split below / beside; move between splits.</td></tr>
+        <tr><td>Terminal tabs</td><td><code>Ctrl + Shift + T</code>, <code>Ctrl + Shift + Arrows</code>, <code>Alt + 1–9</code></td><td>New tab; move between tabs; jump to a numbered tab.</td></tr>
+        <tr><td>Terminal resizing/scrollback</td><td><code>Super + Ctrl + Shift + Arrows</code>; add Alt for larger steps; <code>Shift + PgUp/PgDn</code></td><td>Resize splits by keyboard; scroll terminal history.</td></tr>
+        <tr><td>File browser</td><td><code>Ctrl + L</code>, <code>Space</code>, <code>Backspace</code></td><td>Go to path; preview; parent folder. Arrows navigate entries.</td></tr>
+        <tr><td>Neovim</td><td><code>Space</code>, <code>Space Space</code>, <code>Space E</code></td><td>Command options; fuzzy file open; file sidebar.</td></tr>
+        <tr><td>Neovim</td><td><code>Space S G</code>, <code>Ctrl + W W</code>, <code>Shift + H/L</code></td><td>Search file contents; switch sidebar/editor; previous/next tab.</td></tr>
+        <tr><td>Neovim help/files</td><td><code>?</code>, <code>A / Shift+A / D / M / R</code></td><td>Show help; add file/dir, delete, move, rename in sidebar.</td></tr>
+      </tbody></table>
+      <p class="source-note">Omarchy's full shortcut list also includes media, capture, notifications, display settings, web apps, and other optional applications. Keep those only where rukiOS ships the corresponding feature; do not bind mouse-only window dragging or scrolling.</p>
+    </details>
+    <div class="note"><b>Compatibility and no-mouse rule:</b> these are proposals, not bindings implemented today. Omarchy already claims several Super chords; when ruki runs inside Omarchy, never override the host's bindings. In a standalone rukiOS compositor session, provide defaults with editable user overrides. Do not copy mouse drag/resize/workspace-scroll operations: provide keyboard equivalents. The TUI, CLI, and text console must remain usable without a compositor.</div>
+  </section>
+  <section class="audit"><h2>Current screen check</h2><table class="table"><thead><tr><th>Screen</th><th>Matches the target</th><th>Gap to resolve</th></tr></thead><tbody>
+    <tr><td><b>System Console</b></td><td><span class="ok">✓</span> j/k and arrows move between sections; / filters services; r refreshes; y/Enter confirms and n/Esc cancels service changes; q exits.</td><td><span class="partial">△</span> h/l also move vertically instead of matching their panel-left/right meaning. No ? help, and Enter does not consistently open the selected item.</td></tr>
+    <tr><td><b>ruki-monitor</b></td><td><span class="ok">✓</span> h/l or Tab switch panels; j/k and arrows move process rows; / filters; r refreshes; x requests process stop; confirmation keys match.</td><td><span class="partial">△</span> No ? help. Numeric panel keys need visible hints. Mouse-click panel selection exists in code but is outside the no-mouse product requirement; do not make it necessary.</td></tr>
+  </tbody></table><div class="note"><b>Audit result:</b> both apps already share the main navigation, search, refresh, exit, and confirmation patterns. The largest consistency gaps are missing help, the Console h/l behavior, and context actions that need visible hints. Treat this map as the target; the audit records current behavior and does not claim every binding is implemented.</div></section>
+  <footer><span>rukiOS · Shared keyboard map</span><span>Target bindings checked against apps/ruki/src/tui.rs and apps/ruki/src/monitor/ui.rs</span></footer>
+</main>
+</body>
+</html>
