@@ -56,7 +56,7 @@ The interface uses Ratatui and Crossterm. System details rely on standard Linux 
 
 The repository workspace and planned package boundaries are described in [docs/architecture/PROJECT_STRUCTURE.md](docs/architecture/PROJECT_STRUCTURE.md).
 
-Explore the proposed product direction, scope, roadmap, and safety rules in the interactive [rukiOS product artifact](artifacts/index.html), or review the [shared keyboard map and current screen audit](artifacts/keyboard-map.html).
+Explore the proposed product direction, scope, roadmap, and safety rules in the interactive [rukiOS product artifact](artifacts/index.html), or review the [shared keyboard map and current screen audit](artifacts/keyboard-map.html) and [terminal/filesystem interface map](artifacts/interface-map.html).
 
 Commands for packages, files, and natural-language requests are planned for later.
 
